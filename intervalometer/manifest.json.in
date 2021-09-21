@@ -1,0 +1,15 @@
+{
+    "name": "intervalometer.dgoffredo",
+    "description": "Capture photos as regular intervals",
+    "architecture": "@CLICK_ARCH@",
+    "title": "Intervalometer",
+    "hooks": {
+        "intervalometer": {
+            "apparmor": "intervalometer.apparmor",
+            "desktop":  "intervalometer.desktop"
+        }
+    },
+    "version": "@BUILD_VERSION@",
+    "maintainer": "David Goffredo <dmgoffredo@gmail.com>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}

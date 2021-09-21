@@ -1,0 +1,7 @@
+[Desktop Entry]
+_Name=Intervalometer
+Exec=intervalometer %U
+Icon=assets/logo.svg
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
