@@ -1,14 +1,20 @@
-# Intervalometer
+Intervalometer
+==============
+I generated a skeleton app and then tweaked it until it would take pictures.
 
-Capture photos at regular intervals.
+Use [clickable][1] to build the app and load it onto a phone.
 
-## License
+Then, in the app, push the button to start taking a picture every fifteen
+minutes.
 
-Copyright (C) 2021  David Goffredo
+The pictures are saved to `/home/phablet/intervalometer.dgoffredo/`.
 
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3, as published
-by the Free Software Foundation.
+It stops taking pictures if the phone locks.  Even if you prevent the app from
+suspending, the `Camera` library still becomes unavailable on lock.  So, you
+have to keep the phone active.  To turn the screen off, I use an external
+script (not included in this repository).
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranties of MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+The important source file is [Main.qml](qml/Main.qml).
 
-You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+[1]: https://clickable-ut.dev/
+
