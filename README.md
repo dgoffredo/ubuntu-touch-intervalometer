@@ -7,7 +7,7 @@ Use [clickable][1] to build the app and load it onto a phone.
 Then, in the app, push the button to start taking a picture every fifteen
 minutes.
 
-The pictures are saved to `/home/phablet/intervalometer.dgoffredo/`.
+The pictures are saved to `/home/phablet/Pictures/intervalometer.dgoffredo/`.
 
 It stops taking pictures if the phone locks.  Even if you prevent the app from
 suspending, the `Camera` library still becomes unavailable on lock.  So, you
