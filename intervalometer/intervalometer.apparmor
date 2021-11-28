@@ -1,4 +1,7 @@
 {
-    "policy_groups": [],
+    "policy_groups": [
+       "picture_files",
+       "camera" 
+    ],
     "policy_version": 16.04
 }

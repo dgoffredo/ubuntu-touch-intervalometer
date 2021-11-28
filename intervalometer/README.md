@@ -1,6 +1,6 @@
 # Intervalometer
 
-Capture photos as regular intervals
+Capture photos at regular intervals.
 
 ## License
 
