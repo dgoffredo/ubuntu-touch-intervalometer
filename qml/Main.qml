@@ -54,19 +54,23 @@ MainView {
             }
 
             Button {
-                Layout.preferredHeight: 400
-                // height: 400
-                // Layout.fillHeight: true
+                Layout.preferredHeight: 300
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignHCenter
                 text: i18n.tr('Press here!')
                 onClicked: {
                     Example.speak()
                     if (timer.running) {
+                        console.log("disabling auto image capture");
                         label.text = "Autocapture Disabled"
                         photoPreview.source = "";
+                        videoPreview.source = camera;
+                        videoPreview.visible  = true;
                     } else {
+                        console.log("enabling auto image capture");
                         label.text = "Autocapture Enabled"
+                        videoPreview.source = null;
+                        videoPreview.visible  = false;
                     }
                     timer.running = !timer.running
                 }
@@ -74,7 +78,7 @@ MainView {
 
             Timer {
                 id: timer
-                interval: 15 * 60 * 1000  // milliseconds
+                interval: 15 * 60 * 1000  // milliseconds (15 minutes)
                 running: false
                 repeat: true
                 triggeredOnStart: true
@@ -117,9 +121,9 @@ MainView {
                     }
                 }
                 VideoOutput {
+                    id: videoPreview
                     source: camera
                     anchors.fill: parent
-                    focus : visible // to receive focus and capture key events when visible
                 }
                 Image {
                     id: photoPreview
