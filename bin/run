@@ -1,0 +1,6 @@
+#!/bin/sh
+
+clickable build --skip-review && \
+    clickable install --verbose && \
+    clickable launch --verbose && \
+    clickable logs --verbose
